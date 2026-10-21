@@ -1,19 +1,15 @@
 output "cluster_name" {
-  description = "EKS cluster name"
-  value       = aws_eks_cluster.this.name
+  value = module.eks.cluster_name
 }
 
 output "cluster_endpoint" {
-  description = "EKS API server endpoint"
-  value       = aws_eks_cluster.this.endpoint
-}
-
-output "update_kubeconfig_command" {
-  description = "Run this to configure kubectl for the cluster"
-  value       = "aws eks update-kubeconfig --name ${aws_eks_cluster.this.name} --region ${var.aws_region}"
+  value = module.eks.cluster_endpoint
 }
 
 output "oidc_provider_arn" {
-  description = "IAM OIDC provider ARN (for IRSA)"
-  value       = aws_iam_openid_connect_provider.oidc.arn
+  value = module.eks.oidc_provider_arn
+}
+
+output "update_kubeconfig_command" {
+  value = "aws eks update-kubeconfig --name ${module.eks.cluster_name} --region ${var.aws_region}"
 }

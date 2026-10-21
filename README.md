@@ -3,7 +3,9 @@
 > Production-style Amazon EKS cluster with a managed node group and IRSA — all provisioned with Terraform.
 > **Author:** Muhammad Ahmad · **IaC:** Terraform · **Cloud:** AWS
 
-![Terraform](https://img.shields.io/badge/Terraform-1.5%2B-7B42BC?logo=terraform&logoColor=white)
+![Terraform CI](https://github.com/AhmadMughal-DS/aws-eks-kubernetes-terraform/actions/workflows/terraform.yml/badge.svg)
+![Terraform](https://img.shields.io/badge/Terraform-1.6%2B-7B42BC?logo=terraform&logoColor=white)
+![Security](https://img.shields.io/badge/scanned-tfsec%20%7C%20checkov-success)
 ![AWS](https://img.shields.io/badge/AWS-EKS%20%7C%20IAM%20%7C%20VPC-FF9900?logo=amazonaws&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-1.30-326CE5?logo=kubernetes&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
